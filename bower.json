@@ -1,8 +1,8 @@
 {
   "name": "ng-drag-num",
-  "homepage": "https://github.com/darrendahl/ngDragNum",
+  "homepage": "https://github.com/darrendahl/ng-drag-num",
   "description": "Drag number to increase and decrease the value",
-  "main": "ng-drag-num-directive.js",
+  "main": "src/ng-drag-num-directive.js",
   "moduleType": [
     "globals"
   ],
