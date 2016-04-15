@@ -1,17 +1,6 @@
-var app = angular.module('app',[]);
+angular.module('app',[])
 
-app.controller('AppCtrl',['$scope', function($scope){
-  
-  $scope.num = {
-    num: 2
-  };
-  
-  $scope.change = function(){
-    console.log($scope.num.num);
-  }
-}]);
-
-app.directive('ngDragNum', function($compile, $timeout){
+.directive('ngDragNum', ['$compile', '$timeout', function($compile, $timeout){
   return {
       restrict : 'AE',
       template: '<div class="drag-num">{{num}}</div>',
@@ -20,13 +9,13 @@ app.directive('ngDragNum', function($compile, $timeout){
           onChange: '='
       },
       link: function(scope, elem, attrs){   
-        elem.bind('mousedown', function(event){
+        elem.bind('mousedown touchstart', function(event){
           scope.down = true;
           document.body.style.cursor = "ns-resize";
           event.stopPropagation();
         });
         
-        angular.element(document).bind('mouseup', function(event){
+        angular.element(document).bind('mouseup touchend', function(event){
           scope.down = false;
           document.body.style.cursor = "default";
           event.stopPropagation();
@@ -41,6 +30,7 @@ app.directive('ngDragNum', function($compile, $timeout){
           scope.num += 1;
           $timeout(scope.onChange, 0);
         }
+        
         var last_position = {}
         angular.element(document).bind('mousemove', function(event){
 
@@ -79,5 +69,5 @@ app.directive('ngDragNum', function($compile, $timeout){
         });
       }
   };
-});
+}]);
 

@@ -1,0 +1,29 @@
+{
+  "name": "ng-drag-num",
+  "homepage": "https://github.com/darrendahl/ngDragNum",
+  "description": "Drag number to increase and decrease the value",
+  "main": "ng-drag-num-directive.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "Drag",
+    "number",
+    "increase",
+    "decrease",
+    "value",
+    "increment",
+    "decrement"
+  ],
+  "authors": [
+    "Darren Dahl"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
