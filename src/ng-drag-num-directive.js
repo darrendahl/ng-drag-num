@@ -1,4 +1,4 @@
-angular.module('app',[])
+angular.module('ngDragNum',[])
 
 .directive('ngDragNum', ['$compile', '$timeout', function($compile, $timeout){
   return {
