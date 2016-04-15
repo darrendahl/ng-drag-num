@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style type="text/css">
+  	.drag-num{
+  		cursor: ns-resize;
+	}
+  </style>
+</head>
+<body>
+  <div ng-app="app">
+      <div ng-controller="AppCtrl">
+        <ng-drag-num num="num.num" on-change="change">
+          
+        </ng-drag-num>
+      </div>
+  </div>
+
+</body>
+</html>
