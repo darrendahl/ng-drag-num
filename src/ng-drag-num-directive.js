@@ -15,7 +15,7 @@ angular.module('ngDragNum',[])
           event.stopPropagation();
         });
         
-        angular.element(document).bind('mouseup touchend', function(event){
+        angular.element(window).bind('mouseup touchend', function(event){
           scope.down = false;
           document.body.style.cursor = "default";
           event.stopPropagation();
@@ -32,7 +32,7 @@ angular.module('ngDragNum',[])
         }
         
         var last_position = {}
-        angular.element(document).bind('mousemove', function(event){
+        angular.element(window).bind('mousemove', function(event){
 
           if(scope.down){
             document.body.style.cursor = "ns-resize";
